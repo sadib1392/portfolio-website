@@ -148,6 +148,7 @@ var headerTl = gsap.timeline();
 
 gsap.fromTo("#logo", {opacity: 0, y: -50}, {opacity: 1, duration: 1, y: 0});
 gsap.fromTo(".nav-link", {opacity: 0, y: -50}, {opacity: 1, duration: 1, y: 0});
+
 gsap.fromTo('.st3', {opacity: 0}, {opacity: 1, stagger: .2, duration: 2});
 
 
@@ -155,7 +156,19 @@ gsap.fromTo('.st3', {opacity: 0}, {opacity: 1, stagger: .2, duration: 2});
 headerTl.fromTo(".hero-image-text", {opacity: 0, y: 100}, {opacity: 1, duration: 1, y: 0});
 headerTl.fromTo(".cta", {opacity: 0, y: 100}, {opacity: 1, duration: 1, y: 0});
 
+// Hamburger Menu and Close Menu
 
+let open = document.querySelector('.hamburger-menu');
+let close = document.querySelector('.hamburger-menu-close');
 
-console.log(projectCardAirplanePaths);
+let closeMenuOne = document.querySelector('.line-1');
+let closeMenuTwo = document.querySelector('.line-2');
+let closeMenuThree = document.querySelector('.line-3');
 
+let randomAnimation = document.querySelector('.random-animation');
+
+function openMenu() {
+    open.classList.toggle("open-menu");
+    open.style.zIndex = "-100";
+    close.style.display = "flex";
+  }
