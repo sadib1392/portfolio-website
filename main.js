@@ -41,7 +41,7 @@ skillsCardAnimations.forEach(card => {
     card.style.opacity = 0;
 })
 
-contactFormAnimation.style.opacity = 0;
+// contactFormAnimation.style.opacity = 0;
 
 // INTERSECTION OBSERVERS
 

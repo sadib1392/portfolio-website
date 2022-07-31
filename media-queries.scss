@@ -146,6 +146,10 @@
 
     nav {
         position: fixed;
+        padding-inline: 2rem;
+        z-index: 10;
+        width: 100%;
+        height: max-content;
     }
 
     nav ul li:not(#logo) {

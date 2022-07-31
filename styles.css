@@ -1509,6 +1509,12 @@ nav a.nav-link:not(#contact-button):hover::after {
   }
   nav {
     position: fixed;
+    padding-inline: 2rem;
+    z-index: 10;
+    width: 100%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
   }
   nav ul li:not(#logo) {
     display: none;
