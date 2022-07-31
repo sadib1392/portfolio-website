@@ -106,14 +106,23 @@ nav {
     }
 }
 
+.hamburger-menu-container {
+    display: none;
+    justify-content: center; align-items: center;
+    position: absolute;
+  //  border: 1px solid red;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 3rem;
+    width: 2rem;
+}
+    
 .hamburger-menu {
     display: flex;
     flex-direction: column;
-    gap: .5rem;
     position: absolute;
-    right: 2rem;
-    top: 2rem;
- //   transform: translateY(-50%);
+    gap: .5rem;
     transform-origin: center;
     opacity: 1;
 
@@ -127,20 +136,16 @@ nav {
 .hamburger-menu-close {
     display: flex;
     flex-direction: column;
-    justify-content: center; align-items: center;
- //   gap: .5rem;
     position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    padding-right: 3rem;
-    opacity: 0;
+    justify-content: center; align-items: center;
+    visibility: hidden;
 
     .dg-line {
         position: absolute;
         width: 2rem;
         height: 4px;
         background-color: var(--secondary-clr);
+      //  background-color: blue;
     }
 
     .line-1 {
@@ -153,12 +158,18 @@ nav {
 
     .line-3 {
        opacity: 0;
-       transform: translateY(-3px);
     }
 }
 
 .open-menu {
-    animation: openMenu 250ms forwards;
+    visibility: hidden;
+    animation: openMenu 250ms forwards ease-in;
+    transition: visibility 0s linear 300ms;
+}
+
+.close-menu {
+    visibility: hidden;
+    transition: visibility 0s linear 300ms;
 }
 
 .close-menu-one {
@@ -173,12 +184,50 @@ nav {
     animation: closeMenuThree 2s forwards;
 }
 
+#random-box {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    transform: translateX(1000px);
+}
+
+.random-animation {
+    animation: randomAnimation 2s forwards;
+}
+
+.random-animation-reverse {
+    animation: randomAnimationReverse 2s forwards;
+}
+
+@keyframes randomAnimation {
+    from {
+        transform: translateX(1000px);
+    }
+    to {
+        transform: translateX(-1000px);
+    }
+}
+
+@keyframes randomAnimationReverse {
+    from {
+        transform: translateX(-1000px);
+    }
+    to {
+        transform: translateX(1000px);
+    }
+}
+
+// ANIMATION FOR HAMBUGER MENU
+
 @keyframes openMenu {
     from {
         transform: rotate(0);
+        opacity: 1;
     }
     to {
-        transform: rotate(360deg);
+        transform: rotate(45deg);
+        opacity: 0;
     }
 }
 
@@ -187,7 +236,7 @@ nav {
         transform: rotate(-45deg) translateY(0);
     }
     to {
-        transform: rotate(0) translateY(-.91rem);
+        transform: rotate(0) translateY(-.75rem);
     }
 }
 
@@ -196,7 +245,7 @@ nav {
         transform: rotate(45deg) translateY(0);
     }
     to {
-        transform: rotate(0) translateY(.58rem);
+        transform: rotate(0) translateY(.75rem);
     }
 }
 
@@ -208,25 +257,6 @@ nav {
         opacity: 1;
     }
 }
-
-@keyframes randomAnimation {
-    from {
-        transform: translateX(1000px);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
-.random-animation {
-    display: none;
-    position: absolute;
-    background-color: white;
-    width: 4rem;
-    height: 4rem;
-    animation: randomAnimation 1s ease-in-out forwards;
-}
-
 
 #logo {
     margin-right: auto;
@@ -474,6 +504,7 @@ nav {
     margin-top: .5rem;
     background: rgb(33,33,33);
     background: linear-gradient(180deg, rgba(33,33,33,1) 0%, rgba(35,35,35,.5) 100%);
+    border-radius: 0 0 40px 40px;
 
     h1 {
         margin-bottom: 0;
@@ -550,6 +581,7 @@ nav {
     place-content: center;
     position: relative;
     overflow-y: visible;
+    gap: 3rem;
 
     &::after {
         content: '';
@@ -586,6 +618,7 @@ nav {
         font-size: 6rem;
         color: var(--secondary-clr);
         position: relative;
+        margin-top: 4rem;
 
         &:hover {
             text-shadow: 2px 2px 5px #fd770450;
@@ -1105,146 +1138,4 @@ nav {
     }
 }
 
-@media (max-width: 1306px) {
-    .cta {
-        font-size: 1rem;
-    }
-
-    .hero-image-text {
-        font-size: 3rem;
-    }
-}
-
-@media (max-width: 906px) {
-    .cta {
-        font-size: 1rem;
-        border: 1px solid white;
-    }
-
-    .hero-image-text {
-        font-size: 2rem;
-        line-height: 1.4;
-    }
-
-    .project-card-container {
-        transform: scale(.85);
-    }
-
-    .projects-wrapper {
-        padding-top: 8rem;
-        padding-bottom: 4rem;
-    }
-
-    .projects-wrapper::after {
-        display: none;
-    }
-
-    .project-card-wrapper {
-        gap: initial;
-    }
-
-    .project-cards-row {
-        gap: initial;
-    }
-
-    .row-1 {
-        margin: 0;
-    }
-
-    .experience-container-wrapper {
-        gap: initial;
-    }
-
-    .experience-container {
-        transform: scale(.85);
-    }
-
-    nav {
-        padding-inline: 2rem;
-    }
-
-    .main-wrapper {
-        padding-left: 2rem;
-    }
-
-    .technical-wrapper {
-        gap: initial;
-    }
-
-    .technical-container {
-        transform: scale(.85);
-    }
-
-    .technical-1 ul, .technical-2 ul, .technical-3 ul {
-        gap: initial;
-    }
-
-    .skills-container ul .skill {
-        font-size: 1rem;
-    }
-
-    .form-wrapper {
-        transform: scale(.85);
-    }
-
-    .contact-me-wrapper {
-        padding-bottom: 0;
-
-        h1 {
-            margin-bottom: 0;
-        }
-    }
-
-}
-
-@media (max-width: 828px) {
-    .skills-container ul .skill {
-        font-size: .75rem;
-    }
-
-    .hero-image-text-container {
-        top: 30%;
-    }
-
-    .hero-image-text {
-        font-size: 1.5rem;
-    }
-
-    .cta {
-        font-size: .75rem;
-        margin-top: 1rem;
-    }
-}
-
-@media (max-width: 744px) {
-    // .form-wrapper {
-    //     transform: scale(.75);
-    // }
-    .form-wrapper {
-        width: 100%;
-    }
-
-    .form-r1 {
-        flex-direction: column;
-    }
-
-    .contact-me-wrapper .form-wrapper .form-r1 input {
-        width: 100%;
-    }
-
-    .contact-me-wrapper .form-wrapper .form-r1 {
-        gap: 2rem;
-    }
-
-    nav ul li:not(#logo) {
-        display: none;
-    }
-
-    #logo {
-        margin-left: 0;
-    }
-
-    .main-wrapper {
-        padding-left: 0;
-    }
-}
+@import './media-queries.scss';

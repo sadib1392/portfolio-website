@@ -1,0 +1,141 @@
+@media (max-width: 1600px) {
+  .cta {
+    font-size: 1rem;
+  }
+  .hero-image-text {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 1306px) {
+  .cta {
+    font-size: 1rem;
+  }
+  .hero-image-text {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 906px) {
+  .cta {
+    font-size: 1rem;
+    border: 1px solid white;
+  }
+  .hero-image-text {
+    font-size: 2rem;
+    line-height: 1.4;
+  }
+  .project-card-container {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+  .projects-wrapper {
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+    gap: initial;
+  }
+  .projects-wrapper::after {
+    display: none;
+  }
+  .project-card-wrapper {
+    gap: initial;
+  }
+  .project-cards-row {
+    gap: initial;
+  }
+  .row-1 {
+    margin: 0;
+  }
+  .experience-container-wrapper {
+    gap: initial;
+  }
+  .experience-container {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+  nav {
+    padding-inline: 2rem;
+  }
+  .main-wrapper {
+    padding-left: 2rem;
+  }
+  .technical-wrapper {
+    gap: initial;
+  }
+  .technical-container {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+  .technical-1 ul, .technical-2 ul, .technical-3 ul {
+    gap: initial;
+  }
+  .skills-container ul .skill {
+    font-size: 1rem;
+  }
+  .form-wrapper {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+  .contact-me-wrapper {
+    padding-bottom: 0;
+  }
+  .contact-me-wrapper h1 {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 828px) {
+  .skills-container ul .skill {
+    font-size: .75rem;
+  }
+  .hero-image-text-container {
+    top: 30%;
+  }
+  .hero-image-text {
+    font-size: 1.5rem;
+  }
+  .cta {
+    font-size: .75rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 744px) {
+  .project-card-container {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  .form-wrapper {
+    width: 100%;
+  }
+  .form-r1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact-me-wrapper .form-wrapper .form-r1 input {
+    width: 100%;
+  }
+  .contact-me-wrapper .form-wrapper .form-r1 {
+    gap: 2rem;
+  }
+  nav {
+    position: fixed;
+  }
+  nav ul li:not(#logo) {
+    display: none;
+  }
+  #logo {
+    margin-left: 0;
+  }
+  .main-wrapper {
+    padding-left: 0;
+  }
+  .hamburger-menu-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+/*# sourceMappingURL=media-queries.css.map */

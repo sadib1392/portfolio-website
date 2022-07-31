@@ -97,6 +97,23 @@ nav a.nav-link:not(#contact-button):hover::after {
   transition: transform 200ms ease-in, -webkit-transform 200ms ease-in;
 }
 
+.hamburger-menu-container {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 3rem;
+  width: 2rem;
+}
+
 .hamburger-menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -105,10 +122,8 @@ nav a.nav-link:not(#contact-button):hover::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: .5rem;
   position: absolute;
-  right: 2rem;
-  top: 2rem;
+  gap: .5rem;
   -webkit-transform-origin: center;
           transform-origin: center;
   opacity: 1;
@@ -128,19 +143,14 @@ nav a.nav-link:not(#contact-button):hover::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: absolute;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  padding-right: 3rem;
-  opacity: 0;
+  visibility: hidden;
 }
 
 .hamburger-menu-close .dg-line {
@@ -162,13 +172,20 @@ nav a.nav-link:not(#contact-button):hover::after {
 
 .hamburger-menu-close .line-3 {
   opacity: 0;
-  -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
 }
 
 .open-menu {
-  -webkit-animation: openMenu 250ms forwards;
-          animation: openMenu 250ms forwards;
+  visibility: hidden;
+  -webkit-animation: openMenu 250ms forwards ease-in;
+          animation: openMenu 250ms forwards ease-in;
+  -webkit-transition: visibility 0s linear 300ms;
+  transition: visibility 0s linear 300ms;
+}
+
+.close-menu {
+  visibility: hidden;
+  -webkit-transition: visibility 0s linear 300ms;
+  transition: visibility 0s linear 300ms;
 }
 
 .close-menu-one {
@@ -186,14 +203,79 @@ nav a.nav-link:not(#contact-button):hover::after {
           animation: closeMenuThree 2s forwards;
 }
 
+#random-box {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  -webkit-transform: translateX(1000px);
+          transform: translateX(1000px);
+}
+
+.random-animation {
+  -webkit-animation: randomAnimation 2s forwards;
+          animation: randomAnimation 2s forwards;
+}
+
+.random-animation-reverse {
+  -webkit-animation: randomAnimationReverse 2s forwards;
+          animation: randomAnimationReverse 2s forwards;
+}
+
+@-webkit-keyframes randomAnimation {
+  from {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+  }
+  to {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+  }
+}
+
+@keyframes randomAnimation {
+  from {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+  }
+  to {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+  }
+}
+
+@-webkit-keyframes randomAnimationReverse {
+  from {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+  }
+  to {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+  }
+}
+
+@keyframes randomAnimationReverse {
+  from {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+  }
+  to {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+  }
+}
+
 @-webkit-keyframes openMenu {
   from {
     -webkit-transform: rotate(0);
             transform: rotate(0);
+    opacity: 1;
   }
   to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    opacity: 0;
   }
 }
 
@@ -201,10 +283,12 @@ nav a.nav-link:not(#contact-button):hover::after {
   from {
     -webkit-transform: rotate(0);
             transform: rotate(0);
+    opacity: 1;
   }
   to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    opacity: 0;
   }
 }
 
@@ -214,8 +298,8 @@ nav a.nav-link:not(#contact-button):hover::after {
             transform: rotate(-45deg) translateY(0);
   }
   to {
-    -webkit-transform: rotate(0) translateY(-0.91rem);
-            transform: rotate(0) translateY(-0.91rem);
+    -webkit-transform: rotate(0) translateY(-0.75rem);
+            transform: rotate(0) translateY(-0.75rem);
   }
 }
 
@@ -225,8 +309,8 @@ nav a.nav-link:not(#contact-button):hover::after {
             transform: rotate(-45deg) translateY(0);
   }
   to {
-    -webkit-transform: rotate(0) translateY(-0.91rem);
-            transform: rotate(0) translateY(-0.91rem);
+    -webkit-transform: rotate(0) translateY(-0.75rem);
+            transform: rotate(0) translateY(-0.75rem);
   }
 }
 
@@ -236,8 +320,8 @@ nav a.nav-link:not(#contact-button):hover::after {
             transform: rotate(45deg) translateY(0);
   }
   to {
-    -webkit-transform: rotate(0) translateY(0.58rem);
-            transform: rotate(0) translateY(0.58rem);
+    -webkit-transform: rotate(0) translateY(0.75rem);
+            transform: rotate(0) translateY(0.75rem);
   }
 }
 
@@ -247,8 +331,8 @@ nav a.nav-link:not(#contact-button):hover::after {
             transform: rotate(45deg) translateY(0);
   }
   to {
-    -webkit-transform: rotate(0) translateY(0.58rem);
-            transform: rotate(0) translateY(0.58rem);
+    -webkit-transform: rotate(0) translateY(0.75rem);
+            transform: rotate(0) translateY(0.75rem);
   }
 }
 
@@ -268,38 +352,6 @@ nav a.nav-link:not(#contact-button):hover::after {
   to {
     opacity: 1;
   }
-}
-
-@-webkit-keyframes randomAnimation {
-  from {
-    -webkit-transform: translateX(1000px);
-            transform: translateX(1000px);
-  }
-  to {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
-
-@keyframes randomAnimation {
-  from {
-    -webkit-transform: translateX(1000px);
-            transform: translateX(1000px);
-  }
-  to {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
-
-.random-animation {
-  display: none;
-  position: absolute;
-  background-color: white;
-  width: 4rem;
-  height: 4rem;
-  -webkit-animation: randomAnimation 1s ease-in-out forwards;
-          animation: randomAnimation 1s ease-in-out forwards;
 }
 
 #logo {
@@ -608,6 +660,7 @@ nav a.nav-link:not(#contact-button):hover::after {
   background: #212121;
   background: -webkit-gradient(linear, left top, left bottom, from(#212121), to(rgba(35, 35, 35, 0.5)));
   background: linear-gradient(180deg, #212121 0%, rgba(35, 35, 35, 0.5) 100%);
+  border-radius: 0 0 40px 40px;
 }
 
 .technical-wrapper h1 {
@@ -700,6 +753,7 @@ nav a.nav-link:not(#contact-button):hover::after {
   place-content: center;
   position: relative;
   overflow-y: visible;
+  gap: 3rem;
 }
 
 .projects-wrapper::after {
@@ -727,6 +781,7 @@ nav a.nav-link:not(#contact-button):hover::after {
   font-size: 6rem;
   color: var(--secondary-clr);
   position: relative;
+  margin-top: 4rem;
 }
 
 .projects-wrapper h1:hover {
@@ -1330,6 +1385,15 @@ nav a.nav-link:not(#contact-button):hover::after {
           box-shadow: 2px 2px 5px rgba(253, 119, 4, 0.75);
 }
 
+@media (max-width: 1600px) {
+  .cta {
+    font-size: 1rem;
+  }
+  .hero-image-text {
+    font-size: 4rem;
+  }
+}
+
 @media (max-width: 1306px) {
   .cta {
     font-size: 1rem;
@@ -1355,6 +1419,7 @@ nav a.nav-link:not(#contact-button):hover::after {
   .projects-wrapper {
     padding-top: 8rem;
     padding-bottom: 4rem;
+    gap: initial;
   }
   .projects-wrapper::after {
     display: none;
@@ -1423,6 +1488,10 @@ nav a.nav-link:not(#contact-button):hover::after {
 }
 
 @media (max-width: 744px) {
+  .project-card-container {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
   .form-wrapper {
     width: 100%;
   }
@@ -1438,6 +1507,9 @@ nav a.nav-link:not(#contact-button):hover::after {
   .contact-me-wrapper .form-wrapper .form-r1 {
     gap: 2rem;
   }
+  nav {
+    position: fixed;
+  }
   nav ul li:not(#logo) {
     display: none;
   }
@@ -1446,6 +1518,11 @@ nav a.nav-link:not(#contact-button):hover::after {
   }
   .main-wrapper {
     padding-left: 0;
+  }
+  .hamburger-menu-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 /*# sourceMappingURL=styles.css.map */

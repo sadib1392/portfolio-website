@@ -161,14 +161,39 @@ headerTl.fromTo(".cta", {opacity: 0, y: 100}, {opacity: 1, duration: 1, y: 0});
 let open = document.querySelector('.hamburger-menu');
 let close = document.querySelector('.hamburger-menu-close');
 
+let menuOpen = true;
+
 let closeMenuOne = document.querySelector('.line-1');
 let closeMenuTwo = document.querySelector('.line-2');
 let closeMenuThree = document.querySelector('.line-3');
 
-let randomAnimation = document.querySelector('.random-animation');
+let randomBox = document.getElementById('random-box');
+
+let visible = 'visible';
 
 function openMenu() {
-    open.classList.toggle("open-menu");
-    open.style.zIndex = "-100";
-    close.style.display = "flex";
+    open.classList.toggle('open-menu');
+    close.style.visibility = "visible";
+    randomBox.classList.toggle('random-animation');
+}
+
+  function closeMenu() {
+    closeMenuOne.classList.toggle('close-menu-one');
+    closeMenuTwo.classList.toggle('close-menu-two');
+    closeMenuThree.classList.toggle('close-menu-three');
+    close.classList.toggle('close-menu');
+    open.classList.toggle('open-menu');
+    randomBox.classList.toggle('random-animation-reverse');
   }
+
+
+
+function menuSwitch() {
+    if(menuOpen) {
+        openMenu();
+    }
+    else {
+        closeMenu();
+    }
+    menuOpen = false;
+}
