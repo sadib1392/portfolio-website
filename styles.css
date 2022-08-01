@@ -1405,7 +1405,7 @@ nav a.nav-link:not(#contact-button):hover::after {
   }
 }
 
-@media (max-width: 906px) {
+@media (max-width: 1000px) {
   .cta {
     font-size: 1rem;
     border: 1px solid white;
@@ -1506,9 +1506,11 @@ nav a.nav-link:not(#contact-button):hover::after {
   .cta {
     font-size: 1rem;
   }
-  .project-card-container {
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
+  .project-wrapper {
+    padding-top: 0;
+  }
+  .project-cards-row {
+    gap: 1rem;
   }
   .form-wrapper {
     width: 100%;

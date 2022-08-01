@@ -18,7 +18,7 @@
     }
 }
 
-@media (max-width: 906px) {
+@media (max-width: 1000px) {
     .cta {
         font-size: 1rem;
         border: 1px solid white;
@@ -141,8 +141,12 @@
         font-size: 1rem;
     }
 
-    .project-card-container {
-        transform: scale(.8);
+    .project-wrapper {
+        padding-top: 0;
+    }
+
+    .project-cards-row {
+        gap: 1rem;
     }
 
     .form-wrapper {
