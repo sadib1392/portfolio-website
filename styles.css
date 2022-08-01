@@ -205,7 +205,7 @@ nav a.nav-link:not(#contact-button):hover::after {
           animation: closeMenuThree 2s forwards;
 }
 
-#random-box {
+#side-nav {
   position: absolute;
   width: 80px;
   height: 80px;
@@ -214,12 +214,12 @@ nav a.nav-link:not(#contact-button):hover::after {
           transform: translateX(1000px);
 }
 
-.random-animation {
+.side-nav-animation {
   -webkit-animation: randomAnimation 2s forwards;
           animation: randomAnimation 2s forwards;
 }
 
-.random-animation-reverse {
+.side-nav-animation-reverse {
   -webkit-animation: randomAnimationReverse 2s forwards;
           animation: randomAnimationReverse 2s forwards;
 }
@@ -1490,6 +1490,22 @@ nav a.nav-link:not(#contact-button):hover::after {
 }
 
 @media (max-width: 744px) {
+  .hero-image-text-container {
+    top: 35%;
+  }
+  .hero-image-wrapper img {
+    -webkit-transform: translate(-22rem, 5rem);
+            transform: translate(-22rem, 5rem);
+    max-height: 50rem;
+    width: auto;
+  }
+  .hero-image-text {
+    font-size: 2rem;
+    width: 60%;
+  }
+  .cta {
+    font-size: 1rem;
+  }
   .project-card-container {
     -webkit-transform: scale(0.8);
             transform: scale(0.8);

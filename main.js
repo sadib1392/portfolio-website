@@ -167,14 +167,14 @@ let closeMenuOne = document.querySelector('.line-1');
 let closeMenuTwo = document.querySelector('.line-2');
 let closeMenuThree = document.querySelector('.line-3');
 
-let randomBox = document.getElementById('random-box');
+let sideNav = document.getElementById('side-nav');
 
 let visible = 'visible';
 
 function openMenu() {
     open.classList.toggle('open-menu');
     close.style.visibility = "visible";
-    randomBox.classList.toggle('random-animation');
+    sideNav.classList.toggle('side-nav-animation');
 }
 
   function closeMenu() {
@@ -183,7 +183,7 @@ function openMenu() {
     closeMenuThree.classList.toggle('close-menu-three');
     close.classList.toggle('close-menu');
     open.classList.toggle('open-menu');
-    randomBox.classList.toggle('random-animation-reverse');
+    sideNav.classList.toggle('side-nav-animation-reverse');
   }
 
 function menuSwitch() {
@@ -197,21 +197,17 @@ function menuSwitch() {
 }
 
 let navBar = document.querySelector('.nav-bar');
+let navBarHeight = navBar.offsetHeight;
 let lastScrollPos = 0;
 let currentScrollPos = 0;
 
 var lastScrollTop = 0;
 
-if(window.scrollY == 0) {
-    navBar.classList.add('nav-bar-mobile-animation-backwards');
- } 
+
 
 window.addEventListener("scroll", function(){
    var st = window.scrollY;
-   if(st == 0) {
-    navBar.classList.add('nav-bar-mobile-animation-backwards');
- } 
-     else if (st > lastScrollTop){
+     if (st > lastScrollTop){
         // scroll down
         navBar.classList.add('nav-bar-mobile-animation-backwards');
         navBar.classList.remove('nav-bar-mobile-animation-forwards');

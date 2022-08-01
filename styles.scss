@@ -186,7 +186,7 @@ nav {
     animation: closeMenuThree 2s forwards;
 }
 
-#random-box {
+#side-nav {
     position: absolute;
     width: 80px;
     height: 80px;
@@ -194,11 +194,11 @@ nav {
     transform: translateX(1000px);
 }
 
-.random-animation {
+.side-nav-animation {
     animation: randomAnimation 2s forwards;
 }
 
-.random-animation-reverse {
+.side-nav-animation-reverse {
     animation: randomAnimationReverse 2s forwards;
 }
 

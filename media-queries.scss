@@ -121,9 +121,26 @@
 }
 
 @media (max-width: 744px) {
-    // .form-wrapper {
-    //     transform: scale(.75);
-    // }
+
+    .hero-image-text-container {
+        top: 35%;
+    }
+
+    .hero-image-wrapper img {
+       transform: translate(-22rem, 5rem);
+        max-height: 50rem;
+        width: auto;
+    }
+
+    .hero-image-text {
+        font-size: 2rem;
+        width: 60%;
+    }
+
+    .cta {
+        font-size: 1rem;
+    }
+
     .project-card-container {
         transform: scale(.8);
     }
