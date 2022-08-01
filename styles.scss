@@ -130,6 +130,7 @@ nav {
         width: 2rem;
         height: 4px;
         background-color: var(--secondary-clr);
+        border-radius: 4px;
     }
 }
 
@@ -146,6 +147,7 @@ nav {
         height: 4px;
         background-color: var(--secondary-clr);
       //  background-color: blue;
+        border-radius: 4px;
     }
 
     .line-1 {
@@ -217,6 +219,7 @@ nav {
         transform: translateX(1000px);
     }
 }
+
 
 // ANIMATION FOR HAMBUGER MENU
 

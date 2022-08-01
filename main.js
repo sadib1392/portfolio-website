@@ -186,8 +186,6 @@ function openMenu() {
     randomBox.classList.toggle('random-animation-reverse');
   }
 
-
-
 function menuSwitch() {
     if(menuOpen) {
         openMenu();
@@ -197,3 +195,34 @@ function menuSwitch() {
     }
     menuOpen = false;
 }
+
+let navBar = document.querySelector('.nav-bar');
+let lastScrollPos = 0;
+let currentScrollPos = 0;
+
+var lastScrollTop = 0;
+
+if(window.scrollY == 0) {
+    navBar.classList.add('nav-bar-mobile-animation-backwards');
+ } 
+
+window.addEventListener("scroll", function(){
+   var st = window.scrollY;
+   if(st == 0) {
+    navBar.classList.add('nav-bar-mobile-animation-backwards');
+ } 
+     else if (st > lastScrollTop){
+        // scroll down
+        navBar.classList.add('nav-bar-mobile-animation-backwards');
+        navBar.classList.remove('nav-bar-mobile-animation-forwards');
+     }
+     else {
+        // scroll up
+        navBar.classList.add('nav-bar-mobile-animation-forwards');
+        navBar.classList.remove('nav-bar-mobile-animation-backwards');
+     }
+     lastScrollTop = st <= 0 ? 0 : st; 
+}, false);
+   
+
+   

@@ -146,10 +146,37 @@
 
     nav {
         position: fixed;
+        top: 0;
         padding-inline: 2rem;
         z-index: 10;
         width: 100%;
         height: max-content;
+    }
+
+    .nav-bar-mobile-animation-forwards {
+        animation: navBarAnimationForwards .5s forwards;
+    }
+
+    .nav-bar-mobile-animation-backwards {
+        animation: navBarAnimationBackwards .5s forwards;
+    }
+
+    @keyframes navBarAnimationForwards {
+        from {
+            transform: translateY(-1000px);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes navBarAnimationBackwards {
+        from {
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(-1000px);
+        }
     }
 
     nav ul li:not(#logo) {

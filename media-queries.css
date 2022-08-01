@@ -122,12 +122,61 @@
   }
   nav {
     position: fixed;
+    top: 0;
     padding-inline: 2rem;
     z-index: 10;
     width: 100%;
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
+  }
+  .nav-bar-mobile-animation-forwards {
+    -webkit-animation: navBarAnimationForwards .5s forwards;
+            animation: navBarAnimationForwards .5s forwards;
+  }
+  .nav-bar-mobile-animation-backwards {
+    -webkit-animation: navBarAnimationBackwards .5s forwards;
+            animation: navBarAnimationBackwards .5s forwards;
+  }
+  @-webkit-keyframes navBarAnimationForwards {
+    from {
+      -webkit-transform: translateY(-1000px);
+              transform: translateY(-1000px);
+    }
+    to {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+  }
+  @keyframes navBarAnimationForwards {
+    from {
+      -webkit-transform: translateY(-1000px);
+              transform: translateY(-1000px);
+    }
+    to {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+  }
+  @-webkit-keyframes navBarAnimationBackwards {
+    from {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    to {
+      -webkit-transform: translateY(-1000px);
+              transform: translateY(-1000px);
+    }
+  }
+  @keyframes navBarAnimationBackwards {
+    from {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    to {
+      -webkit-transform: translateY(-1000px);
+              transform: translateY(-1000px);
+    }
   }
   nav ul li:not(#logo) {
     display: none;
