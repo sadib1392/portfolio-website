@@ -6,6 +6,8 @@ var skillsTextTl = gsap.timeline();
 var skillsCardTl = gsap.timeline();
 var contactFormTl = gsap.timeline();
 
+var mediaQuery = window.matchMedia("(max-width: 743px)");
+
 // INTERSECTION OBSERVER FOR HEADERS
 
 const headerAnimations = document.querySelectorAll('.header-animation');
@@ -15,7 +17,6 @@ const experienceCardAnimations = document.querySelectorAll('.experience-card-ani
 const skillsTextAnimations = document.querySelectorAll('.skills-text-animation');
 const skillsCardAnimations = document.querySelectorAll('.skills-card-animation');
 const contactFormAnimation = document.querySelector('.contact-form-animation');
-
 
 headerAnimations.forEach(header => {
     header.style.opacity = 0;
@@ -41,8 +42,6 @@ skillsCardAnimations.forEach(card => {
     card.style.opacity = 0;
 })
 
-// contactFormAnimation.style.opacity = 0;
-
 // INTERSECTION OBSERVERS
 
 const headerObserver = new IntersectionObserver(entries => {
@@ -54,7 +53,7 @@ const headerObserver = new IntersectionObserver(entries => {
     })
 }, 
     {
-    threshold: 1,
+    threshold: .5,
     })
 
 const projectCardObserver = new IntersectionObserver(entries => {
@@ -66,7 +65,7 @@ const projectCardObserver = new IntersectionObserver(entries => {
     })
 }, 
     {
-    threshold: 1,
+    threshold: 0,
     })
 
 
@@ -141,6 +140,17 @@ skillsCardAnimations.forEach(text => {
 })
 
 contactFormObserver.observe(contactFormAnimation);
+
+// MEDIA QUERIES
+
+let projectCardContainer = document.querySelectorAll('.project-card-container');
+
+// if(mediaQuery.matches) {
+//     projectCardObserver.disconnect();
+//     projectCardAnimations.forEach(card => {
+//         card.style.opacity = '1';
+//     })
+// }
 
 // GSAP ANIMATION
 

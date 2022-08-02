@@ -635,6 +635,10 @@ nav {
     }
 }
 
+.project-card-wrapper-mobile {
+    display: none;
+}
+
 .project-card-wrapper {
     display: flex;
     flex-direction: column;
