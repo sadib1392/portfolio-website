@@ -1617,7 +1617,6 @@ nav a.nav-link:not(#contact-button):hover::after {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    overflow: auto;
   }
   .project-card-wrapper {
     display: none;
@@ -1626,6 +1625,13 @@ nav a.nav-link:not(#contact-button):hover::after {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    max-width: 100%;
+    margin-left: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  .project-card-container {
+    min-width: 15rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */
