@@ -421,8 +421,7 @@ nav {
 
 .skills-and-technical-wrapper {
    // @include linear-gradient-dark-backwards();
-    background: rgb(33,33,33);
-    background: linear-gradient(180deg,  rgba(52,52,52,1) 0%, rgba(51,51,51,1) 100%);
+    background: var(--main-clr);
     border-bottom: 1px solid rgba(35,35,35, .35);
     padding-block: 5rem;
 }
@@ -576,32 +575,22 @@ nav {
     padding-bottom: 7rem;
 }
 
+.technical-mobile-view {
+    display: none;
+}
+
 .projects-wrapper > * {
     color: var(--main-clr);
 }
 
 .projects-wrapper {
-    @include linear-gradient-dark();
+    background-color: var(--main-clr);
     padding-block: 5rem;
     display: grid;
     place-content: center;
     position: relative;
     overflow-y: visible;
     gap: 3rem;
-
-    &::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 10%;
-        transform: translateY(-50%);
-        width: 100%;
-        height: 100%;
-        background-image: url('assets/graphics/projects-graphic-01.svg');
-        background-repeat: no-repeat;
-        opacity: .15;
-    }
-
 
     // &::after {
     //     content: '';
@@ -1066,7 +1055,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    @include linear-gradient-dark-backwards();
+    background-color: var(--main-clr);
     padding-bottom: 10rem;
 
     h1 {
@@ -1077,8 +1066,9 @@ nav {
 
     .form-wrapper {
         background-color: var(--main-clr);
-        padding: 2rem 2rem 2.5rem 2rem;
-        border-radius: 4px;
+        padding: 4rem;
+        border-radius: 10px;
+        border: 3px solid var(--secondary-clr);
 
         form {
             display: flex;
@@ -1129,7 +1119,7 @@ nav {
         .form-r3 {
             button {
                 border: 2px solid var(--secondary-clr);
-                padding: .5rem 1.5rem;
+                padding: 0.5rem 3.5rem;
                 font-size: 1rem;
                 font-family: 'Poppins';
                 background: none;
