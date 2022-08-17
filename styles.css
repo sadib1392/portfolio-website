@@ -22,6 +22,7 @@ body {
   font-family: "Poppins";
   margin: 0;
   overflow-x: hidden;
+  background-color: #212121;
 }
 
 .main-wrapper {
@@ -663,6 +664,8 @@ nav a.nav-link:not(#contact-button):hover::after {
 
 .see-more-btn {
   padding: 0.5rem 3rem;
+  text-decoration: none;
+  color: black;
   background: white;
   border-radius: 4px;
   font-family: "Poppins";
@@ -1141,7 +1144,7 @@ nav a.nav-link:not(#contact-button):hover::after {
   .skills-container ul .skill {
     font-size: 0.75rem;
   }
-  .hero-image-text-container {
+  .home.hero-image-text-container {
     top: 30%;
   }
   .hero-image-text {
@@ -1170,7 +1173,7 @@ nav a.nav-link:not(#contact-button):hover::after {
   .hero-image-text-container {
     top: 35%;
   }
-  .hero-image-wrapper img {
+  .home.hero-image-wrapper img {
     transform: translate(-22rem, 5rem);
     max-height: 50rem;
     width: auto;
@@ -1296,7 +1299,7 @@ nav a.nav-link:not(#contact-button):hover::after {
   .projects-wrapper h1, .experience-wrapper h1, .skills-wrapper h1, .contact-me-wrapper h1 {
     font-size: 5rem;
   }
-  .hero-image-wrapper img {
+  .home.hero-image-wrapper img {
     transform: translate(-36rem, 5rem);
   }
   .hero-image-text-container {
@@ -1347,7 +1350,7 @@ nav a.nav-link:not(#contact-button):hover::after {
     text-align: center;
     width: 100%;
   }
-  .hero-image-wrapper img {
+  .home.hero-image-wrapper img {
     transform: translate(-41rem, 5rem);
   }
   .hero-image-text-container {

@@ -81,7 +81,7 @@
   .skills-container ul .skill {
     font-size: 0.75rem;
   }
-  .hero-image-text-container {
+  .home.hero-image-text-container {
     top: 30%;
   }
   .hero-image-text {
@@ -110,7 +110,7 @@
   .hero-image-text-container {
     top: 35%;
   }
-  .hero-image-wrapper img {
+  .home.hero-image-wrapper img {
     transform: translate(-22rem, 5rem);
     max-height: 50rem;
     width: auto;
@@ -236,7 +236,7 @@
   .projects-wrapper h1, .experience-wrapper h1, .skills-wrapper h1, .contact-me-wrapper h1 {
     font-size: 5rem;
   }
-  .hero-image-wrapper img {
+  .home.hero-image-wrapper img {
     transform: translate(-36rem, 5rem);
   }
   .hero-image-text-container {
@@ -287,7 +287,7 @@
     text-align: center;
     width: 100%;
   }
-  .hero-image-wrapper img {
+  .home.hero-image-wrapper img {
     transform: translate(-41rem, 5rem);
   }
   .hero-image-text-container {

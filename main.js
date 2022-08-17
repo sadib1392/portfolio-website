@@ -1,3 +1,5 @@
+
+
 // INTERSECTION OBSERVER
 var headerTl = gsap.timeline();
 var projectCardTl = gsap.timeline();
@@ -16,7 +18,7 @@ const projectCardAirplanePaths = document.querySelectorAll('.st3');
 const experienceCardAnimations = document.querySelectorAll('.experience-card-animation');
 const skillsTextAnimations = document.querySelectorAll('.skills-text-animation');
 const skillsCardAnimations = document.querySelectorAll('.skills-card-animation');
-const contactFormAnimation = document.querySelector('.contact-form-animation');
+const contactFormAnimations = document.querySelectorAll('.contact-form-animation');
 
 headerAnimations.forEach(header => {
     header.style.opacity = 0;
@@ -139,7 +141,11 @@ skillsCardAnimations.forEach(text => {
     skillsCardObserver.observe(text);
 })
 
-contactFormObserver.observe(contactFormAnimation);
+contactFormAnimations.forEach(el => {
+    contactFormObserver.observe(el);
+})
+
+// contactFormObserver.observe(contactFormAnimation);
 
 // MEDIA QUERIES
 
@@ -230,5 +236,3 @@ window.addEventListener("scroll", function(){
      lastScrollTop = st <= 0 ? 0 : st; 
 }, false);
 
-
-   

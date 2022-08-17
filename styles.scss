@@ -27,6 +27,7 @@ body {
     font-family: 'Poppins';
     margin: 0;
     overflow-x: hidden;
+    background-color: #212121;
 }
 
 @mixin linear-gradient-dark {
@@ -705,6 +706,8 @@ nav {
 
 .see-more-btn {
     padding: .5rem 3rem;
+    text-decoration: none;
+    color: black;
     background: white;
     border-radius: 4px;
     font-family: 'Poppins';
