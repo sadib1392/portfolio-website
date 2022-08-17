@@ -102,7 +102,7 @@ const skillsCardObserver = new IntersectionObserver(entries => {
     })
 }, 
     {
-    threshold: 1,
+    threshold: .5,
     })
 
 const contactFormObserver = new IntersectionObserver(entries => {

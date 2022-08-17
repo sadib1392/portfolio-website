@@ -6,7 +6,6 @@
     font-size: 4rem;
   }
 }
-
 @media (max-width: 1306px) {
   .cta {
     font-size: 1rem;
@@ -15,7 +14,6 @@
     font-size: 3rem;
   }
 }
-
 @media (max-width: 1000px) {
   .cta {
     font-size: 1rem;
@@ -26,8 +24,7 @@
     line-height: 1.4;
   }
   .project-card-container {
-    -webkit-transform: scale(0.85);
-            transform: scale(0.85);
+    transform: scale(0.85);
   }
   .projects-wrapper {
     padding-top: 8rem;
@@ -50,8 +47,7 @@
     gap: initial;
   }
   .experience-container {
-    -webkit-transform: scale(0.85);
-            transform: scale(0.85);
+    transform: scale(0.85);
   }
   nav {
     padding-inline: 2rem;
@@ -63,8 +59,7 @@
     gap: initial;
   }
   .technical-container {
-    -webkit-transform: scale(0.85);
-            transform: scale(0.85);
+    transform: scale(0.85);
   }
   .technical-1 ul, .technical-2 ul, .technical-3 ul {
     gap: initial;
@@ -73,8 +68,7 @@
     font-size: 1rem;
   }
   .form-wrapper {
-    -webkit-transform: scale(0.85);
-            transform: scale(0.85);
+    transform: scale(0.85);
   }
   .contact-me-wrapper {
     padding-bottom: 0;
@@ -83,10 +77,9 @@
     margin-bottom: 0;
   }
 }
-
 @media (max-width: 828px) {
   .skills-container ul .skill {
-    font-size: .75rem;
+    font-size: 0.75rem;
   }
   .hero-image-text-container {
     top: 30%;
@@ -95,7 +88,7 @@
     font-size: 1.5rem;
   }
   .cta {
-    font-size: .75rem;
+    font-size: 0.75rem;
     margin-top: 1rem;
   }
   .contact-me-wrapper .form-wrapper {
@@ -103,31 +96,22 @@
     width: 100%;
   }
   .contact-me-wrapper .form-wrapper .form-r1 {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .contact-me-wrapper .form-wrapper .form-r1 input {
     width: 100%;
   }
   .contact-me-wrapper .form-wrapper .form-r3 {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
 }
-
 @media (max-width: 744px) {
   .hero-image-text-container {
     top: 35%;
   }
   .hero-image-wrapper img {
-    -webkit-transform: translate(-22rem, 5rem);
-            transform: translate(-22rem, 5rem);
+    transform: translate(-22rem, 5rem);
     max-height: 50rem;
     width: auto;
   }
@@ -148,10 +132,7 @@
     width: 100%;
   }
   .form-r1 {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .contact-me-wrapper .form-wrapper .form-r1 input {
     width: 100%;
@@ -170,51 +151,43 @@
     height: max-content;
   }
   .nav-bar-mobile-animation-forwards {
-    -webkit-animation: navBarAnimationForwards .5s forwards;
-            animation: navBarAnimationForwards .5s forwards;
+    -webkit-animation: navBarAnimationForwards 0.5s forwards;
+            animation: navBarAnimationForwards 0.5s forwards;
   }
   .nav-bar-mobile-animation-backwards {
-    -webkit-animation: navBarAnimationBackwards .5s forwards;
-            animation: navBarAnimationBackwards .5s forwards;
+    -webkit-animation: navBarAnimationBackwards 0.5s forwards;
+            animation: navBarAnimationBackwards 0.5s forwards;
   }
   @-webkit-keyframes navBarAnimationForwards {
     from {
-      -webkit-transform: translateY(-1000px);
-              transform: translateY(-1000px);
+      transform: translateY(-1000px);
     }
     to {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
+      transform: translateY(0);
     }
   }
   @keyframes navBarAnimationForwards {
     from {
-      -webkit-transform: translateY(-1000px);
-              transform: translateY(-1000px);
+      transform: translateY(-1000px);
     }
     to {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
+      transform: translateY(0);
     }
   }
   @-webkit-keyframes navBarAnimationBackwards {
     from {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
+      transform: translateY(0);
     }
     to {
-      -webkit-transform: translateY(-1000px);
-              transform: translateY(-1000px);
+      transform: translateY(-1000px);
     }
   }
   @keyframes navBarAnimationBackwards {
     from {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
+      transform: translateY(0);
     }
     to {
-      -webkit-transform: translateY(-1000px);
-              transform: translateY(-1000px);
+      transform: translateY(-1000px);
     }
   }
   nav ul li:not(#logo) {
@@ -227,31 +200,19 @@
     padding-left: 0;
   }
   .hamburger-menu-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 }
-
 @media (max-width: 743px) {
   .projects-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
   .project-card-wrapper {
     display: none;
   }
   .project-card-wrapper-mobile {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     max-width: 100%;
     margin-left: auto;
@@ -262,27 +223,21 @@
     min-width: 15rem;
   }
 }
-
 @media (max-width: 675px) {
   .skills-container ul {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     padding: 0;
   }
   .skills-container ul .skill {
     font-size: 1rem;
   }
 }
-
 @media (max-width: 659px) {
   .projects-wrapper h1, .experience-wrapper h1, .skills-wrapper h1, .contact-me-wrapper h1 {
     font-size: 5rem;
   }
   .hero-image-wrapper img {
-    -webkit-transform: translate(-36rem, 5rem);
-            transform: translate(-36rem, 5rem);
+    transform: translate(-36rem, 5rem);
   }
   .hero-image-text-container {
     top: 58%;
@@ -294,8 +249,6 @@
     display: none;
   }
   .technical-mobile-view {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     max-width: 100%;
     margin-left: auto;
@@ -303,13 +256,8 @@
     overflow-y: hidden;
   }
   .technical-mobile-view ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
     gap: 1rem;
   }
   .technical-mobile-view li {
@@ -319,19 +267,15 @@
     font-size: 1.5rem;
   }
 }
-
 @media (max-width: 581px) {
   .contact-me-wrapper h1 {
     font-size: 4.5rem;
   }
 }
-
 @media (max-width: 515px) {
   .experience-container {
     width: 27rem;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
   }
   .experience-container::after {
     display: none;
@@ -344,37 +288,30 @@
     width: 100%;
   }
   .hero-image-wrapper img {
-    -webkit-transform: translate(-41rem, 5rem);
-            transform: translate(-41rem, 5rem);
+    transform: translate(-41rem, 5rem);
   }
   .hero-image-text-container {
     top: 58%;
     text-align: center;
   }
   .cta-container {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
   .projects-wrapper h1, .experience-wrapper h1, .skills-wrapper h1 {
     font-size: 4rem;
   }
 }
-
 @media (max-width: 470px) {
   .contact-me-wrapper h1 {
     font-size: 4rem;
   }
   .contact-me-wrapper .form-wrapper {
     border: none;
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
 }
-
 @media (max-width: 423px) {
   .contact-me-wrapper h1 {
     font-size: 3.5rem;
   }
-}
-/*# sourceMappingURL=media-queries.css.map */
+}/*# sourceMappingURL=media-queries.css.map */
