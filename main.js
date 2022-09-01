@@ -7,6 +7,7 @@ var experienceCardTl = gsap.timeline();
 var skillsTextTl = gsap.timeline();
 var skillsCardTl = gsap.timeline();
 var contactFormTl = gsap.timeline();
+var aboutMeTl = gsap.timeline();
 
 var mediaQuery = window.matchMedia("(max-width: 743px)");
 
@@ -19,6 +20,7 @@ const experienceCardAnimations = document.querySelectorAll('.experience-card-ani
 const skillsTextAnimations = document.querySelectorAll('.skills-text-animation');
 const skillsCardAnimations = document.querySelectorAll('.skills-card-animation');
 const contactFormAnimations = document.querySelectorAll('.contact-form-animation');
+const aboutMeAnimations = document.querySelectorAll('.about-me-animation');
 
 headerAnimations.forEach(header => {
     header.style.opacity = 0;
@@ -42,6 +44,10 @@ skillsTextAnimations.forEach(text => {
 
 skillsCardAnimations.forEach(card => {
     card.style.opacity = 0;
+})
+
+aboutMeAnimations.forEach(section => {
+    section.style.opacity = 0;
 })
 
 // INTERSECTION OBSERVERS
@@ -80,7 +86,7 @@ const experienceCardObserver = new IntersectionObserver(entries => {
     })
 }, 
     {
-    threshold: 1,
+    threshold: .25,
     })
 
 const skillsTextObserver = new IntersectionObserver(entries => {
@@ -119,6 +125,18 @@ const contactFormObserver = new IntersectionObserver(entries => {
     threshold: 1,
     })
 
+const aboutMeObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting) {
+            aboutMeTl.fromTo(entry.target, {opacity: 0, y: 50}, {opacity: 1, duration: 1, y: 0, stagger: .2});
+            aboutMeObserver.unobserve(entry.target)
+        }
+    })
+}, 
+    {
+    threshold: 1,
+    })
+
 // OBSERVING
 
 headerAnimations.forEach(header => {
@@ -142,6 +160,10 @@ skillsCardAnimations.forEach(text => {
 })
 
 contactFormAnimations.forEach(el => {
+    contactFormObserver.observe(el);
+})
+
+aboutMeAnimations.forEach(el => {
     contactFormObserver.observe(el);
 })
 

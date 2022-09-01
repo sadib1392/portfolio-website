@@ -416,7 +416,7 @@
         justify-content: center;
     }
 
-    .projects-wrapper h1, .experience-wrapper h1, .skills-wrapper h1 {
+    .projects-wrapper h1, .experience-wrapper h1, .skills-wrapper h1, .about-me-wrapper h1 {
         font-size: 4rem;
     }
 }
@@ -440,7 +440,55 @@
 
 }
 
-@media (min-width: 320px) {
+@media (min-width: 423px) {
+    footer {
+        grid-template-columns: auto;
+        grid-template-rows: repeat(9, auto);
+        place-content: center;
+        padding-top: 3rem;
 
+        .hz-line-footer-mobile {
+            width:  80vw;
+            height: 1px;
+            background-color: #1e1e1e;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
 
+            &:last-child {
+                margin-top: 2rem;
+            }
+        }
+
+        h2, p {
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .credits-footer-mobile {
+            div {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .socials {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .copyright {
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+    }
 }
+
