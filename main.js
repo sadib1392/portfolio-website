@@ -241,6 +241,14 @@ let currentScrollPos = 0;
 
 var lastScrollTop = 0;
 
+// Project Side Nav Item No Pointer Event When OpenMenu = True
+
+let projectMobileNavItem = document.getElementById('projects-nav-item-mobile');
+
+
+if(menuSwitch == true) {
+    projectMobileNavItem.style.pointerEvents = "none";
+}
 
 
 window.addEventListener("scroll", function(){
