@@ -220,7 +220,7 @@ nav a.nav-link:not(#contact-button):hover::after {
   width: 100vw;
   height: 40vh;
   z-index: -1;
-  background-color: #212121;
+  background-color: #121212;
   -webkit-transform: translateY(-1000px);
           transform: translateY(-1000px);
 }
@@ -254,13 +254,13 @@ nav a.nav-link:not(#contact-button):hover::after {
 }
 
 .side-nav-animation {
-  -webkit-animation: randomAnimation 2s forwards;
-          animation: randomAnimation 2s forwards;
+  -webkit-animation: randomAnimation 1s forwards;
+          animation: randomAnimation 1s forwards;
 }
 
 .side-nav-animation-reverse {
-  -webkit-animation: randomAnimationReverse 2s forwards;
-          animation: randomAnimationReverse 2s forwards;
+  -webkit-animation: randomAnimationReverse 1s forwards;
+          animation: randomAnimationReverse 1s forwards;
 }
 
 @-webkit-keyframes randomAnimation {

@@ -198,7 +198,7 @@ nav {
     width: 100vw;
     height: 40vh;
     z-index: -1;
-    background-color: #212121;
+    background-color: #121212;
     transform: translateY(-1000px);
 
     a {
@@ -226,11 +226,11 @@ nav {
 }
 
 .side-nav-animation {
-    animation: randomAnimation 2s forwards;
+    animation: randomAnimation 1s forwards;
 }
 
 .side-nav-animation-reverse {
-    animation: randomAnimationReverse 2s forwards;
+    animation: randomAnimationReverse 1s forwards;
 }
 
 @keyframes randomAnimation {
