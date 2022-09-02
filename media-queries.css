@@ -356,25 +356,16 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .projects-wrapper h1, .experience-wrapper h1, .skills-wrapper h1, .about-me-wrapper h1 {
+  .projects-wrapper h1, .experience-wrapper h1, .skills-wrapper h1, .about-me-wrapper h1, .contact-me-wrapper h1 {
     font-size: 4rem;
   }
 }
 
 @media (max-width: 470px) {
-  .contact-me-wrapper h1 {
-    font-size: 4rem;
-  }
   .contact-me-wrapper .form-wrapper {
     border: none;
     -webkit-transform: scale(1);
             transform: scale(1);
-  }
-}
-
-@media (max-width: 423px) {
-  .contact-me-wrapper h1 {
-    font-size: 3.5rem;
   }
 }
 

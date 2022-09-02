@@ -197,31 +197,17 @@ headerTl.fromTo(".cta", {opacity: 0, y: 100}, {opacity: 1, duration: 1, y: 0});
 // Hamburger Menu and Close Menu
 
 let open = document.querySelector('.hamburger-menu');
-let close = document.querySelector('.hamburger-menu-close');
-
 let menuOpen = true;
-
-let closeMenuOne = document.querySelector('.line-1');
-let closeMenuTwo = document.querySelector('.line-2');
-let closeMenuThree = document.querySelector('.line-3');
-
 let sideNav = document.getElementById('side-nav');
 
-let visible = 'visible';
-
 function openMenu() {
-    open.classList.toggle('open-menu');
-    close.style.visibility = "visible";
     sideNav.classList.toggle('side-nav-animation');
+    open.classList.toggle('hamburger-menu-focus');
 }
 
   function closeMenu() {
-    closeMenuOne.classList.toggle('close-menu-one');
-    closeMenuTwo.classList.toggle('close-menu-two');
-    closeMenuThree.classList.toggle('close-menu-three');
-    close.classList.toggle('close-menu');
-    open.classList.toggle('open-menu');
     sideNav.classList.toggle('side-nav-animation-reverse');
+    open.classList.toggle('hamburger-menu-focus');
   }
 
 function menuSwitch() {

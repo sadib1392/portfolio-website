@@ -117,8 +117,9 @@ nav {
     right: 2rem;
     top: 50%;
     transform: translateY(-50%);
-    height: 3rem;
-    width: 2rem;
+    height: 4rem;
+    width: 4rem;
+    z-index: 2;
 }
     
 .hamburger-menu {
@@ -133,71 +134,35 @@ nav {
         width: 2rem;
         height: 4px;
         background-color: var(--secondary-clr);
-        border-radius: 4px;
     }
 }
 
-.hamburger-menu-close {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    justify-content: center; align-items: center;
-    visibility: hidden;
-
-    .dg-line {
+.hamburger-menu-focus {
+    &::after {
+        content: '';
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 3rem;
+        height: 3rem;
         position: absolute;
-        width: 2rem;
-        height: 4px;
-        background-color: var(--secondary-clr);
-      //  background-color: blue;
         border-radius: 4px;
+        background-color: #282828;
+        z-index: -1;
+        box-shadow: 1px 1px 2px #fd770450;
+        transition: all 250ms ease-in-out;
     }
-
-    .line-1 {
-        transform: rotate(-45deg);
-    }
-
-    .line-2 {
-        transform: rotate(45deg);
-    }
-
-    .line-3 {
-       opacity: 0;
-    }
-}
-
-.open-menu {
-    visibility: hidden;
-    animation: openMenu 250ms forwards ease-in;
-    transition: visibility 0s linear 300ms;
-}
-
-.close-menu {
-    visibility: hidden;
-    transition: visibility 0s linear 300ms;
-}
-
-.close-menu-one {
-    animation: closeMenuOne 250ms forwards;
-}
-
-.close-menu-two {
-    animation: closeMenuTwo 250ms forwards;
-}
-
-.close-menu-three {
-    animation: closeMenuThree 2s forwards;
 }
 
 #side-nav {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: -25px;
-    right: -32px;
+    top: 0;
+    right: 0;
     width: 100vw;
     height: 40vh;
-    z-index: -1;
+    z-index: 1;
     background-color: #121212;
     transform: translateY(-1000px);
 
