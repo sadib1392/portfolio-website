@@ -448,6 +448,7 @@
             }
         }
 
+
         h2, p {
             text-align: center;
         }
@@ -478,6 +479,11 @@
             margin-top: 1rem;
             margin-bottom: 2rem;
         }
+
+        .copyright-desktop {
+            display: none;
+        }
+
     }
 }
 
@@ -516,6 +522,7 @@
         }
 
         .copyright-desktop {
+            display: block;
             grid-column: 6 / 7;
         }
 

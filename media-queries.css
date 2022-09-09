@@ -415,6 +415,9 @@
     margin-top: 1rem;
     margin-bottom: 2rem;
   }
+  footer .copyright-desktop {
+    display: none;
+  }
 }
 
 @media (min-width: 1180px) {
@@ -449,6 +452,7 @@
     margin: 0;
   }
   footer .copyright-desktop {
+    display: block;
     -ms-grid-column: 6;
     -ms-grid-column-span: 1;
     grid-column: 6 / 7;
