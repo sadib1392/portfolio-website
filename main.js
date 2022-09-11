@@ -252,3 +252,34 @@ window.addEventListener("scroll", function(){
      lastScrollTop = st <= 0 ? 0 : st; 
 }, false);
 
+
+// IMAGE CAROUSEL
+
+let carouselImageOne = document.querySelector('.carousel-1');
+
+let carouselImageTwo = document.querySelector('.carousel-2');
+
+let carouselImageThree = document.querySelector('.carousel-3');
+
+function carousel() {
+
+    setInterval(() => {
+        carouselImageOne.style.opacity = "0";
+    }, 2000);
+
+    setInterval(() => {
+        carouselImageTwo.style.opacity = "0";
+    }, 4000);
+
+    setInterval(() => {
+        carouselImageThree.style.opacity = "0";
+    }, 6000);
+    
+}
+
+carousel();
+setInterval(() => {
+    carouselImageOne.style.opacity = "1";
+    carouselImageTwo.style.opacity = "1";
+    carouselImageThree.style.opacity = "1";
+}, 6000);

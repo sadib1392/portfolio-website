@@ -485,6 +485,37 @@
         }
 
     }
+
+    .synergy-prep-website-concept-design.nav-bar {
+        border-bottom: 5px solid #fd7704;
+    }
+
+    .carousel-1 {
+        width: auto;
+        transform: translate(-15rem, .4rem);
+        z-index: -1;
+        opacity: 1;
+    }
+
+    .carousel-2 {
+        width: auto;
+        transform: translate(-35rem, .4rem);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+        opacity: 1;
+    }
+
+    .carousel-3 {
+        width: auto;
+        transform: translate(-25rem, .4rem);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -3;
+        opacity: 1;
+    }
 }
 
 

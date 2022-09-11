@@ -418,6 +418,36 @@
   footer .copyright-desktop {
     display: none;
   }
+  .synergy-prep-website-concept-design.nav-bar {
+    border-bottom: 5px solid #fd7704;
+  }
+  .carousel-1 {
+    width: auto;
+    -webkit-transform: translate(-15rem, 0.4rem);
+            transform: translate(-15rem, 0.4rem);
+    z-index: -1;
+    opacity: 1;
+  }
+  .carousel-2 {
+    width: auto;
+    -webkit-transform: translate(-35rem, 0.4rem);
+            transform: translate(-35rem, 0.4rem);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    opacity: 1;
+  }
+  .carousel-3 {
+    width: auto;
+    -webkit-transform: translate(-25rem, 0.4rem);
+            transform: translate(-25rem, 0.4rem);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -3;
+    opacity: 1;
+  }
 }
 
 @media (min-width: 1180px) {
