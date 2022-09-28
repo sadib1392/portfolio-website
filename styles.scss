@@ -1175,4 +1175,107 @@ footer {
 
 }
 
+// PROJECTS SYNERGY PREP WEBSITE CONCEPT DEFAULT STYLES
+
+.hero-image-wrapper.synergy-prep-website-concept-design {
+    &::after {
+        display: none;
+    }
+}
+
+.nav-bar-loader {
+    position: absolute;
+    background-color: white;
+    height: 5px;
+    width: 0;
+    animation: imgLoading 10s linear infinite;
+}
+
+@keyframes imgLoading {
+    from {
+        opacity: 100%;
+        width: 0%;
+    }
+    to {
+        opacity: 0%;
+        width: 100%;
+    }
+}
+
+
+.the-company, .project-goals-1 {
+
+    h1 {
+        position: relative;
+        color: #fd7704;
+        text-align: center;
+        text-transform: uppercase;
+        padding-bottom: 1rem;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #313131;
+            width: 100%;
+            height: 1px;
+        }
+        
+    }
+
+    p {
+        color: white;
+        text-align: justify;
+        font-weight: 500;
+    }
+
+    span {
+        color: var(--secondary-clr);
+        font-weight: bold;
+    }
+}
+
+.website-design, .marketing-materials, .email-marketing, .social-media-marketing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+
+
+    span {
+        color: white;
+        background-color: var(--secondary-clr);
+        font-size: 3rem;
+        font-weight: bold;
+        width: 5rem;
+        height: 5rem;
+        text-align: center;
+        border-radius: 50%;
+        line-height: 5rem;
+    }
+
+    h2 {
+        color: white;
+    }
+}
+
+.website-design, .marketing-materials, .email-marketing {
+    
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #313131;
+        width: 100%;
+        height: 1px;
+    }
+}
+
+
 @import './media-queries.scss';

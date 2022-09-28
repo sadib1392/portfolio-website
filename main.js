@@ -255,31 +255,73 @@ window.addEventListener("scroll", function(){
 
 // IMAGE CAROUSEL
 
-let carouselImageOne = document.querySelector('.carousel-1');
+var i = 0;
+var imgArray = [];
+var time = 10000;
 
-let carouselImageTwo = document.querySelector('.carousel-2');
+imgArray[0] = new Image() 
+imgArray[0].src = 'assets/synergy-prep-redesign/hero-image-carousel/hero-image-carousel-1.jpg';
+imgArray[0].classList.add('carousel-1');
 
-let carouselImageThree = document.querySelector('.carousel-3');
+imgArray[1] = new Image() 
+imgArray[1].src = 'assets/synergy-prep-redesign/hero-image-carousel/hero-image-carousel-2.jpg';
+imgArray[1].classList.add('carousel-2');
 
-function carousel() {
+imgArray[2] = new Image() 
+imgArray[2].src = 'assets/synergy-prep-redesign/hero-image-carousel/hero-image-carousel-3.jpg';
+imgArray[2].classList.add('carousel-3');
 
-    setInterval(() => {
-        carouselImageOne.style.opacity = "0";
-    }, 2000);
+var carousel = document.querySelector('.carousel');
 
-    setInterval(() => {
-        carouselImageTwo.style.opacity = "0";
-    }, 4000);
+carousel.append(imgArray[2]);
 
-    setInterval(() => {
-        carouselImageThree.style.opacity = "0";
-    }, 6000);
-    
+function changeImage() {
+    imgArray[i].classList.add('image-changing');
+    carousel.append(imgArray[i]);
+
+    if(i < imgArray.length - 1) {
+        i++;
+    }
+    else {
+        i = 0;
+    }
 }
 
-carousel();
-setInterval(() => {
-    carouselImageOne.style.opacity = "1";
-    carouselImageTwo.style.opacity = "1";
-    carouselImageThree.style.opacity = "1";
-}, 6000);
+
+setInterval(changeImage, time);
+
+window.onload = changeImage;
+
+
+var body = document.querySelector('body');
+
+function showHideNavBar() {
+    navBar.style.opacity = '0';
+    document.addEventListener('scroll', (e)=> {
+        var scrollPos = window.scrollY;
+        if(scrollPos > navBarHeight) {
+            navBar.style.opacity = '1';
+        }
+        if(scrollPos <= navBarHeight) {
+            navBar.style.opacity = '0';
+        }
+    })
+}
+
+
+if(body.classList.contains('synergy-prep-website-concept-design-page')) {
+    window.onload = showHideNavBar;
+}
+
+var topSection = document.querySelector('.carousel-top-section');
+topSectionHeight = topSection.offsetHeight;
+
+document.addEventListener('mousemove', (e) => {
+    var currentMousePosY = e.clientY;
+    if(currentMousePosY <= topSectionHeight) {
+        navBar.style.opacity = '1';
+    }
+    else {
+        navBar.style.opacity = '0';
+    }
+})

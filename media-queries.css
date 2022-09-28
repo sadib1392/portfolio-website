@@ -418,35 +418,58 @@
   footer .copyright-desktop {
     display: none;
   }
-  .synergy-prep-website-concept-design.nav-bar {
+  .carousel-top-section, .carousel-bottom-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 10rem;
+    background-color: #212121;
+  }
+  .carousel-top-section .hero-image-text-container.synergy-prep-website-concept-design, .carousel-bottom-section .hero-image-text-container.synergy-prep-website-concept-design {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .carousel-top-section {
     border-bottom: 5px solid #fd7704;
   }
-  .carousel-1 {
+  .carousel-bottom-section {
+    border-top: 5px solid #fd7704;
+  }
+  .synergy-prep-website-concept-design.hero-image-wrapper {
+    height: 30rem;
+  }
+  .carousel, .carousel-1, .carousel-2, .carousel-3 {
+    -o-object-fit: cover;
+       object-fit: cover;
     width: auto;
-    -webkit-transform: translate(-15rem, 0.4rem);
-            transform: translate(-15rem, 0.4rem);
-    z-index: -1;
-    opacity: 1;
+  }
+  .carousel img, .carousel-1 img, .carousel-2 img, .carousel-3 img {
+    height: 30rem;
+    position: absolute;
+  }
+  .carousel-1 {
+    -webkit-transform: translate(-20%, 0);
+            transform: translate(-20%, 0);
   }
   .carousel-2 {
-    width: auto;
-    -webkit-transform: translate(-35rem, 0.4rem);
-            transform: translate(-35rem, 0.4rem);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -2;
-    opacity: 1;
+    -webkit-transform: translate(-30%, 0);
+            transform: translate(-30%, 0);
   }
   .carousel-3 {
-    width: auto;
-    -webkit-transform: translate(-25rem, 0.4rem);
-            transform: translate(-25rem, 0.4rem);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -3;
-    opacity: 1;
+    -webkit-transform: translate(-35%, 0);
+            transform: translate(-35%, 0);
+  }
+  .the-company, .project-goals-1, .project-goals-2 {
+    padding: 2rem;
   }
 }
 
